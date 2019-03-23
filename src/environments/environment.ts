@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  GITHUB_BEARER_TOKEN: '34d8e5392f49e7870a54209578a56f3d385361e6',
+  GITHUB_GRAPHQL_URI: 'https://api.github.com/graphql',
   production: false
 };
 

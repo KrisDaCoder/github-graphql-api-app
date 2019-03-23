@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card card-body bg-light mb-3" id="issue-item">
+      <div class="row">
+          <div class="col-2">
+              <p class="mx-auto">{{ repoName }}</p>
+              <p class="mx-auto">{{ issue.createdAt | date:'medium' }}</p>
+          </div>
+          <div class="col-lg-6 col-md-4 col-8">
+              <h3>{{ issue.title }}</h3>
+              <p>{{ issue.body }}</p>
+          </div>
+          <div class="col-md-4 d-none d-lg-block">
+                  <button (click)="onClick()" class="btn btn-primary btn-block">
+                          <i class="fa fa-edit pr-1"></i> View Issue
+                  </button>
+          </div>
+      </div>
+  </div>
+</div>

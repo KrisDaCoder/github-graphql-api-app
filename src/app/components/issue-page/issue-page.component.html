@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <a routerLink="/" class="btn btn-link">
+        <i class="fa fa-arrow-circle-o-left"></i> Back
+      </a>
+    </div>
+  </div>
+  <div *ngIf="issue.title" class="card card-body bg-dark">
+    <div class="row">
+      <div class="col-2">
+        <p class="mx-auto">{{ repoName }}</p>
+        <p>{{ issue.createdAt | date:'medium' }}</p>
+      </div>
+      <div class="col-8">
+        <h3>{{ issue.title }}</h3>
+        <p>{{ issue.body }}</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div *ngIf="issue.comments.length > 0">
+    <h4>Comments</h4>
+    <div *ngFor="let comment of issue.comments" class="card card-body bg-light">
+      <div class="row">
+        <div class="col-12">
+          <p>{{ comment }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h4 *ngIf="!issue.title">No Issue to show! Please select one by clicking on the View Issue button for each Issue in the Dashboard.</h4>
+  </div>
+</div>

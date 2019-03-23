@@ -23,9 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/ngx-ui-switch/ui-switch.component.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -131,5 +138,8 @@
       }
     }
   },
-  "defaultProject": "github-graphql-api-app"
+  "defaultProject": "github-graphql-api-app",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

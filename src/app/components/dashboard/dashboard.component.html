@@ -1,0 +1,28 @@
+<div class="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-11">
+                <h1 class="display-4 text-center">Issues in Angular Repo</h1>
+                <br />
+                <div class="input-group">
+                    <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search for issues..."
+                        aria-label="Search">
+                    <div class="input-btn-group">
+                        <button class="btn btn-primary" (click)="search()">Search</button>
+                    </div>
+                </div>
+                <br *ngIf="previousSearchText">
+                <h6 *ngIf="previousSearchText">Previous Text Searched: {{ previousSearchText }}</h6>
+                <hr />
+                <app-issue *ngFor="let issue of issues" [issue]="issue"></app-issue>
+            </div>
+            <div class="col-1">
+                <br>
+                <br>
+                <br>
+                <br>
+                <ui-switch (change)="onChange()" checkedLabel="OPEN" uncheckedLabel="CLOSED" size="large" class="mx-auto" [(ngModel)]="statusBool"></ui-switch>
+            </div>
+        </div>
+    </div>
+</div>
